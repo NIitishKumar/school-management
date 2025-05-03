@@ -31,13 +31,36 @@ export default function TabLayout() {
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarStyle: { display: 'none' },
+          tabBarButton: () => null,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="admin"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Admin',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.badge.shield.checkmark.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="teacher"
+        options={{
+          title: 'Teacher',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill.badge.plus" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="parent"
+        options={{
+          title: 'Parent',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.2.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="student"
+        options={{
+          title: 'Student',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.fill.viewfinder" color={color} />,
         }}
       />
     </Tabs>
